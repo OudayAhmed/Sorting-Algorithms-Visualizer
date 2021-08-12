@@ -6,13 +6,13 @@
   <p>
     <a href="">
     </a>
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/OudayAhmed/Pathfinding-Visualization?style=flat-square">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/OudayAhmed/Pathfinding-Visualization?style=flat-square">
-    <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/OudayAhmed/Pathfinding-Visualization?style=flat-square">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/OudayAhmed/Sorting-Algorithms-Visualizer?style=flat-square">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/OudayAhmed/Sorting-Algorithms-Visualizer?style=flat-square">
+    <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/OudayAhmed/Sorting-Algorithms-Visualizer?style=flat-square">
   </p>	
 </div>
 
-An application that visualizes many sorting algorithms. 
+An application that visualizes many sorting algorithms.
 
 ---
 
@@ -29,18 +29,18 @@ An application that visualizes many sorting algorithms.
 
 ![Demo 1](src/main/resources/com/ouday/images/demo1.gif)
 
-
 - You can select the algorithm you want to visualize. There are many of sorting algorithms in the application:
-  - Insertion Sort
-  - Selection Sort
-  - Bubble Sort
+    - Insertion Sort
+    - Selection Sort
+    - Bubble Sort
 
 
 - You can change the size of the array that you want to sort.
 
 
-- There is also an option for you to change the order of the elements within the array, whether you want them random, ascending or descending.
-  
+- There is also an option for you to change the order of the elements within the array, whether you want them random,
+  ascending or descending.
+
 
 - Moreover, you can change the speed of the visualization.
 
@@ -58,8 +58,7 @@ An application that visualizes many sorting algorithms.
 
 - You should have JDK-11 or higher. If you do not have it, you can download it
   from [here](https://www.oracle.com/se/java/technologies/javase-jdk11-downloads.html).
-- Download the Sorting Algorithms Visualizer jar file from Releases tab or simply by
-  clicking [here]()
+- Download the Sorting Algorithms Visualizer jar file from Releases tab or simply by clicking [here]()
   .
 
 ---
