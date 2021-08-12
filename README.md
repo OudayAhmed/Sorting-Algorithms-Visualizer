@@ -4,7 +4,8 @@
 ![Project Cover](src/main/resources/com/ouday/images/projectCover.jpg)
 <div align="center">
   <p>
-    <a href="">
+    <a href="https://github.com/OudayAhmed/Sorting-Algorithms-Visualizer/releases/download/v1.0/Sorting.Algorithms.Visualizer.jar">
+      <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/OudayAhmed/Sorting-Algorithms-Visualizer/total">
     </a>
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/OudayAhmed/Sorting-Algorithms-Visualizer?style=flat-square">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/OudayAhmed/Sorting-Algorithms-Visualizer?style=flat-square">
@@ -58,7 +59,7 @@ An application that visualizes many sorting algorithms.
 
 - You should have JDK-11 or higher. If you do not have it, you can download it
   from [here](https://www.oracle.com/se/java/technologies/javase-jdk11-downloads.html).
-- Download the Sorting Algorithms Visualizer jar file from Releases tab or simply by clicking [here]()
+- Download the Sorting Algorithms Visualizer jar file from Releases tab or simply by clicking [here](https://github.com/OudayAhmed/Sorting-Algorithms-Visualizer/releases/download/v1.0/Sorting.Algorithms.Visualizer.jar)
   .
 
 ---
