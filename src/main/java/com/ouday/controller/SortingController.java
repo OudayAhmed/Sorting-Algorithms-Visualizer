@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import org.kordamp.ikonli.javafx.FontIcon;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +22,9 @@ public class SortingController {
 
     private int[] array;
     private int[] initialArray;
-    private List<FontIcon> fontIconList;
-    private String algorithmName;
-    private int sizeOfTheArray;
-    private String dataType;
-    private String sortingSpeed;
     private SortingAlgorithmAnimation sortingAlgorithmAnimation;
     private SortingAlgorithmsVisualizerData sortingAlgorithmsVisualizerData;
+
 
     @FXML
     private FontIcon closeIcon;
@@ -65,6 +62,7 @@ public class SortingController {
     @FXML
     private Canvas canvas;
 
+
     @FXML
     void switchToHome(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/com/ouday/view/home.fxml"));
@@ -91,9 +89,9 @@ public class SortingController {
 
     @FXML
     void oneStepSorting(MouseEvent event) {
-        if (playIcon.isVisible() && !sortingAlgorithmAnimation.getSortingIsCompleted()) {
+        if (playIcon.isVisible() && !sortingAlgorithmAnimation.getSortingIsCompleted())
             sortingAlgorithmAnimation.oneStepSorting();
-        } else {
+        else {
             playIcon.setIconColor(Color.valueOf("#c1c0b9"));
             playIcon.setDisable(true);
             oneStepIcon.setIconColor(Color.valueOf("#c1c0b9"));
@@ -119,24 +117,19 @@ public class SortingController {
     }
 
     public void setSortingVisualizerDetails(String algorithmName, int sizeOfTheArray, String dataType, String sortingSpeed) {
-        this.algorithmName = algorithmName;
-        this.sizeOfTheArray = sizeOfTheArray;
-        this.dataType = dataType;
-        this.sortingSpeed = sortingSpeed;
+        algorithmNameLabel.setText("Algorithm's name: " + algorithmName);
+        sizeOfTheArrayLabel.setText("The size of the array: " + sizeOfTheArray);
+        dataTypeLabel.setText("Data type is: " + dataType);
+        sortingSpeedLabel.setText("The speed is: " + sortingSpeed);
 
-        algorithmNameLabel.setText("Algorithm's name: " + this.algorithmName);
-        sizeOfTheArrayLabel.setText("The size of the array: " + this.sizeOfTheArray);
-        dataTypeLabel.setText("Data type is: " + this.dataType);
-        sortingSpeedLabel.setText("The speed is: " + this.sortingSpeed);
-
-        this.fontIconList = new ArrayList<>();
+        List<FontIcon> fontIconList = new ArrayList<>();
         fontIconList.add(homeIcon);
         fontIconList.add(repeatIcon);
         fontIconList.add(playIcon);
         fontIconList.add(stopIcon);
         fontIconList.add(oneStepIcon);
 
-        this.sortingAlgorithmsVisualizerData = new SortingAlgorithmsVisualizerData(this.algorithmName, this.sizeOfTheArray, this.dataType, this.sortingSpeed, this.canvas, this.fontIconList);
+        this.sortingAlgorithmsVisualizerData = new SortingAlgorithmsVisualizerData(algorithmName, sizeOfTheArray, dataType, sortingSpeed, this.canvas, fontIconList);
 
         int[] initialArray = sortingAlgorithmsVisualizerData.getArray();
         this.array = initialArray;
@@ -148,4 +141,5 @@ public class SortingController {
     public SortingAlgorithmAnimation getSortingAlgorithmAnimation() {
         return sortingAlgorithmAnimation;
     }
+
 }

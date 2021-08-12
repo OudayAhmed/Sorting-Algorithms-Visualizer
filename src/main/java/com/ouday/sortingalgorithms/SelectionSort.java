@@ -2,11 +2,12 @@ package com.ouday.sortingalgorithms;
 
 public class SelectionSort {
 
-    private int[] array;
+    private final int[] array;
     private int sortingIndex = 0;
     private int searchMinimumIndex = 1;
     private int minimumIndex = sortingIndex;
-    private int size;
+    private final int size;
+
 
     public SelectionSort(int[] array) {
         this.array = array;
@@ -20,7 +21,7 @@ public class SelectionSort {
                     minimumIndex = searchMinimumIndex;
                 }
                 searchMinimumIndex++;
-            } else if (searchMinimumIndex == size){
+            } else if (searchMinimumIndex == size) {
                 swap();
                 sortingIndex++;
                 searchMinimumIndex = sortingIndex + 1;
@@ -46,4 +47,5 @@ public class SelectionSort {
     public int getMinimumIndex() {
         return minimumIndex;
     }
+
 }

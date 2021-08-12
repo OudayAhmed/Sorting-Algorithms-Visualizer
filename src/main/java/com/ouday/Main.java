@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/com/ouday/view/home.fxml"));
         stage.setScene(new Scene(root, 1280, 720));
-        stage.getIcons().add(new Image(getClass().getResourceAsStream("/com/ouday/images/icon.jpg")));
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/com/ouday/images/projectIcon.png")));
         stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
@@ -22,4 +22,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
 }

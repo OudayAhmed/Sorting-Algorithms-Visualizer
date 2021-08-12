@@ -6,37 +6,35 @@ import javafx.event.ActionEvent;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 import org.kordamp.ikonli.javafx.FontIcon;
+
 import java.util.List;
 
 public class AnimationPlayer {
 
-    private Duration duration;
-    private Timeline timeline;
-    private SortingAlgorithmAnimation sortingAlgorithmAnimation;
-    private List<FontIcon> fontIconList;
-    private FontIcon playIcon;
-    private FontIcon stopIcon;
-    private FontIcon oneStepIcon;
-    private FontIcon repeatIcon;
-    private FontIcon homeIcon;
+    private final Timeline timeline;
+    private final SortingAlgorithmAnimation sortingAlgorithmAnimation;
+    private final FontIcon playIcon;
+    private final FontIcon stopIcon;
+    private final FontIcon oneStepIcon;
+    private final FontIcon repeatIcon;
+    private final FontIcon homeIcon;
+
 
     public AnimationPlayer(Duration duration, SortingAlgorithmAnimation sortingAlgorithmAnimation, List<FontIcon> fontIconList) {
-        this.duration = duration;
         this.sortingAlgorithmAnimation = sortingAlgorithmAnimation;
-        this.fontIconList = fontIconList;
-        this.homeIcon = this.fontIconList.get(0);
-        this.repeatIcon = this.fontIconList.get(1);
-        this.playIcon = this.fontIconList.get(2);
-        this.stopIcon = this.fontIconList.get(3);
-        this.oneStepIcon = this.fontIconList.get(4);
-        this.timeline = new Timeline(new KeyFrame(this.duration, this::oneStep));
+        this.homeIcon = fontIconList.get(0);
+        this.repeatIcon = fontIconList.get(1);
+        this.playIcon = fontIconList.get(2);
+        this.stopIcon = fontIconList.get(3);
+        this.oneStepIcon = fontIconList.get(4);
+        this.timeline = new Timeline(new KeyFrame(duration, this::oneStep));
         this.timeline.setCycleCount(Timeline.INDEFINITE);
     }
 
     public void oneStep(ActionEvent event) {
-        if (!sortingAlgorithmAnimation.getSortingIsCompleted()) {
+        if (!sortingAlgorithmAnimation.getSortingIsCompleted())
             sortingAlgorithmAnimation.oneStepSorting();
-        } else {
+        else {
             playIcon.setIconColor(Color.valueOf("#c1c0b9"));
             playIcon.setDisable(true);
             playIcon.setVisible(true);
@@ -74,4 +72,5 @@ public class AnimationPlayer {
         oneStepIcon.setDisable(true);
         timeline.play();
     }
+
 }

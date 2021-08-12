@@ -1,9 +1,9 @@
 package com.ouday.data;
 
+import com.ouday.animation.BubbleSortAnimation;
 import com.ouday.animation.InsertionSortAnimation;
 import com.ouday.animation.SelectionSortAnimation;
 import com.ouday.animation.SortingAlgorithmAnimation;
-import javafx.animation.Animation;
 import javafx.scene.canvas.Canvas;
 import javafx.util.Duration;
 import org.kordamp.ikonli.javafx.FontIcon;
@@ -12,22 +12,21 @@ import java.util.List;
 
 public class SortingAlgorithmsVisualizerData {
 
-    private String algorithmName;
-    private int sizeOfTheArray;
-    private String dataType;
-    private String sortingSpeed;
-    private Canvas canvas;
-    private ArrayData arrayData;
-    private List<FontIcon> fontIconList;
+    private final String algorithmName;
+    private final String dataType;
+    private final String sortingSpeed;
+    private final Canvas canvas;
+    private final ArrayData arrayData;
+    private final List<FontIcon> fontIconList;
+
 
     public SortingAlgorithmsVisualizerData(String algorithmName, int sizeOfTheArray, String dataType, String sortingSpeed, Canvas canvas, List<FontIcon> fontIconList) {
         this.algorithmName = algorithmName;
-        this.sizeOfTheArray = sizeOfTheArray;
         this.dataType = dataType;
         this.sortingSpeed = sortingSpeed;
         this.canvas = canvas;
         this.fontIconList = fontIconList;
-        this.arrayData = new ArrayData(this.sizeOfTheArray);
+        this.arrayData = new ArrayData(sizeOfTheArray);
     }
 
     public SortingAlgorithmAnimation getSortingAlgorithmAnimation(int[] array) {
@@ -36,6 +35,8 @@ public class SortingAlgorithmsVisualizerData {
                 return new SelectionSortAnimation(array, canvas, Duration.millis(getSortingSpeed()), fontIconList);
             case "Insertion Sort":
                 return new InsertionSortAnimation(array, canvas, Duration.millis(getSortingSpeed()), fontIconList);
+            case "Bubble Sort":
+                return new BubbleSortAnimation(array, canvas, Duration.millis(getSortingSpeed()), fontIconList);
         }
         return null;
     }
@@ -67,4 +68,5 @@ public class SortingAlgorithmsVisualizerData {
         }
         return Double.parseDouble(null);
     }
+
 }

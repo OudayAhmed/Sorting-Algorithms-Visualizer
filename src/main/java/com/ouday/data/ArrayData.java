@@ -6,8 +6,9 @@ import java.util.Random;
 
 public class ArrayData {
 
-    private int[] array;
-    private int sizeOfTheArray;
+    private final int[] array;
+    private final int sizeOfTheArray;
+
 
     public ArrayData(int sizeOfTheArray) {
         this.sizeOfTheArray = sizeOfTheArray;
@@ -16,16 +17,14 @@ public class ArrayData {
 
     public int[] getRandomArray() {
         Random random = new Random();
-        for (int i = 0; i < sizeOfTheArray; i++) {
+        for (int i = 0; i < sizeOfTheArray; i++)
             array[i] = 10 + random.nextInt(605);
-        }
         return array;
     }
 
     public int[] getDescendingOrderArray() {
         getRandomArray();
-        int[] array = Arrays.stream(this.array).boxed().sorted(Collections.reverseOrder()).mapToInt(Integer::intValue).toArray();
-        return array;
+        return Arrays.stream(this.array).boxed().sorted(Collections.reverseOrder()).mapToInt(Integer::intValue).toArray();
     }
 
     public int[] getAscendingOrderArray() {
@@ -33,4 +32,5 @@ public class ArrayData {
         Arrays.sort(array);
         return array;
     }
+
 }

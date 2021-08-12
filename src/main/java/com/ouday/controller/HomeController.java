@@ -1,6 +1,5 @@
 package com.ouday.controller;
 
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.kordamp.ikonli.javafx.FontIcon;
+
 import java.io.IOException;
 
 
@@ -34,6 +34,7 @@ public class HomeController {
     @FXML
     private JFXComboBox<String> sortingSpeedCombobox;
 
+
     @FXML
     void switchToSorting(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/ouday/view/sorting.fxml"));
@@ -56,4 +57,5 @@ public class HomeController {
     void minimizeStage(MouseEvent event) {
         ((Stage) minimizeIcon.getScene().getWindow()).setIconified(true);
     }
+
 }

@@ -2,11 +2,12 @@ package com.ouday.sortingalgorithms;
 
 public class InsertionSort {
 
-    private int[] array;
+    private final int[] array;
     private int sortingIndex = 1;
     private int searchMinimumIndex = sortingIndex - 1;
     private int key;
-    private int size;
+    private final int size;
+
 
     public InsertionSort(int[] array) {
         this.array = array;
@@ -46,4 +47,5 @@ public class InsertionSort {
     public int getSearchMinimumIndex() {
         return searchMinimumIndex;
     }
+
 }

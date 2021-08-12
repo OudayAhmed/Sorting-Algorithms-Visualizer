@@ -3,25 +3,19 @@ package com.ouday.animation;
 import javafx.scene.canvas.Canvas;
 import javafx.util.Duration;
 import org.kordamp.ikonli.javafx.FontIcon;
+
 import java.util.List;
 
 public class SortingAlgorithmAnimation {
 
-    private int[] array;
-    private Canvas canvas;
-    private Draw draw;
-    private Duration duration;
-    private AnimationPlayer animationPlayer;
-    private List<FontIcon> fontIconList;
+    private final Draw draw;
+    private final AnimationPlayer animationPlayer;
     private Boolean sortingIsCompleted = false;
 
+
     public SortingAlgorithmAnimation(int[] array, Canvas canvas, Duration duration, List<FontIcon> fontIconList) {
-        this.array = array;
-        this.canvas = canvas;
-        this.duration = duration;
-        this.fontIconList = fontIconList;
-        this.draw = new Draw(this.array, this.canvas);
-        this.animationPlayer = new AnimationPlayer(this.duration, this, this.fontIconList);
+        this.draw = new Draw(array, canvas);
+        this.animationPlayer = new AnimationPlayer(duration, this, fontIconList);
     }
 
     public Draw getDraw() {
@@ -41,6 +35,6 @@ public class SortingAlgorithmAnimation {
     }
 
     public void oneStepSorting() {
-        return;
     }
+
 }

@@ -1,9 +1,74 @@
 # Sorting Algorithms Visualizer
 
+---
+![Project Cover](src/main/resources/com/ouday/images/projectCover.jpg)
+<div align="center">
+  <p>
+    <a href="">
+    </a>
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/OudayAhmed/Pathfinding-Visualization?style=flat-square">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/OudayAhmed/Pathfinding-Visualization?style=flat-square">
+    <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/OudayAhmed/Pathfinding-Visualization?style=flat-square">
+  </p>	
+</div>
 
-![Sorting_Algorithms_Visualizer_Home](https://user-images.githubusercontent.com/66073097/101107898-9fc82e00-35d3-11eb-806e-d2f83497bf4a.JPG)
+An application that visualizes many sorting algorithms. 
 
-![Sorting_Algorithms_Visualizer_01](https://user-images.githubusercontent.com/66073097/101107973-cdad7280-35d3-11eb-83d8-62689eeb8450.JPG)
+---
 
-![Sorting_Algorithms_Visualizer_02](https://user-images.githubusercontent.com/66073097/101107991-d9009e00-35d3-11eb-9732-6a8bee537f2b.JPG)
+## Contents:
 
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Frameworks and Libraries](#frameworksandlibraries)
+
+---
+<div id='features' />
+
+## 🎯 Features:
+
+![Demo 1](src/main/resources/com/ouday/images/demo1.gif)
+
+
+- You can select the algorithm you want to visualize. There are many of sorting algorithms in the application:
+  - Insertion Sort
+  - Selection Sort
+  - Bubble Sort
+
+
+- You can change the size of the array that you want to sort.
+
+
+- There is also an option for you to change the order of the elements within the array, whether you want them random, ascending or descending.
+  
+
+- Moreover, you can change the speed of the visualization.
+
+
+- You can control the visualization, for instance, running the algorithm step by step or continuously and the ability to
+  stop the visualization at a specific position or even restart the visualization without having to return to the home
+  page.
+
+![Demo 2](src/main/resources/com/ouday/images/demo2.gif)
+
+---
+<div id='installation' />
+
+## ⚙️Installation:
+
+- You should have JDK-11 or higher. If you do not have it, you can download it
+  from [here](https://www.oracle.com/se/java/technologies/javase-jdk11-downloads.html).
+- Download the Sorting Algorithms Visualizer jar file from Releases tab or simply by
+  clicking [here]()
+  .
+
+---
+<div id='frameworksandlibraries' />
+
+## 💡 Frameworks and Libraries:
+
+- JavaFX
+- Ikonli
+- JFoenix
+
+---
